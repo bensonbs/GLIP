@@ -1,25 +1,21 @@
 # GLIP 實戰
 ## GLIP 簡介
-GLIP: Grounded Language-Image Pre-training
-https://github.com/microsoft/GLIP
-一種用於學習對象級、語言感知和語義豐富的視覺表示的基礎語言圖像預訓練 (GLIP) 模型。**GLIP 統一了對象檢測和短語**基礎以進行預訓練。
-統一帶來兩個好處：
+**[GLIP](https://github.com/microsoft/GLIP): Grounded Language-Image Pre-training**
+一種用於學習對象級、語言感知和語義豐富的視覺表示的基礎語言圖像預訓練 (GLIP) 模型。
 
-1. 它允許 GLIP 從檢測和基礎數據中學習，以改進這兩個任務並引導一個良好的基礎模型
-   
-3. GLIP 可以通過以自我訓練的方式生成接地框來利用大量的圖像文本對，從而使學習到的表示具有豐富的語義。
+統一了`目標檢測`和`短語`**基礎以進行預訓練。
 
 
 - ## 模型使用
     ## 範例1
-    想要框選旁邊正在加藥的桶子輸入 **bucket 水桶** ，但使用模型只認得小的水桶
+    #### 想要框選旁邊正在加藥的桶子輸入 `bucket 水桶` ，但使用模型只認得小的水桶
     ![](https://i.imgur.com/lbKSJm6.jpg)
 
-    利用用語義說明 **blue rags on big bucket** **藍色抹布在大水桶** 上成功框選到加藥桶
+    #### 利用用語義說明 `blue rags on big bucket 藍色抹布在大水桶` 上成功框選到加藥桶
     ![](https://i.imgur.com/sDY7lxO.jpg)
 
     ## 範例2
-    **John wearing white suit and Ben wearing black clothes** 模型沒有訓練過防護衣，但是可以使用**white suit 白色套裝**也能成功框選，且模型能夠根據語意推斷哪個是**John** 哪個是 **Ben**。
+    #### `John wearing white suit and Ben wearing black clothes` 模型沒有訓練過防護衣，但是可以使用`white suit 白色套裝`也能成功框選，且模型能夠根據語意推斷哪個是**John** 哪個是 **Ben**。
     - ![](https://i.imgur.com/kOxo8qT.jpg)
 
 
